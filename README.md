@@ -1,0 +1,3 @@
+# Unexpected Loop Termination in COBOL PERFORM VARYING with EXIT PERFORM
+
+This repository demonstrates a common, yet subtle, error encountered when using the PERFORM VARYING statement in COBOL in conjunction with EXIT PERFORM. The error arises from the fact that when EXIT PERFORM is encountered the loop counter (WS-COUNTER in this example) is not incremented. This means that the value of WS-COUNTER will be 5, not 6, after the loop completes, which is unexpected and may lead to logic errors in larger programs.
